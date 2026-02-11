@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oshin ❤️ Shivam | Wedding Invitation</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oshin ❤️ Shivam | Wedding Invitation</title>
 
-    <!-- font -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Meow+Script&display=swap" rel="stylesheet">
-</head>
+
 <style>
 
+/* ====== BODY ====== */
 body {
   background-color: #FFF0F5;
   color: #4A2C2A;
   font-family: "Catamaran", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-#hero h1 {
-  font-family: "Meow Script", cursive;
-  font-size: 4.5rem;
+/* ====== ENVELOPE ====== */
+#envelope-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #FFF0F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
-p, h2, .row div {
-  font-family: "Catamaran", sans-serif;
+.envelope {
+    width: 320px;
+    height: 220px;
+    background: #f6c1cc;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.heart {
-  font-size: 3.5rem;
-  margin: 0 10px;
-  display: inline-block;
-  animation: beat 1.2s infinite;
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f2a7b8;
+    clip-path: polygon(0 0,100% 0,50% 50%);
+    transform-origin: top;
+    transition: .8s;
 }
 
-@keyframes beat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+.letter {
+    position: absolute;
+    inset: 20px;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 40px;
 }
 
-section {
-  padding: 60px 0;
+.open .flap {
+    transform: rotateX(180deg);
 }
 
-#whero p {
-  font-size: 1.3rem;
+.open {
+    animation: fadeOut 1s forwards;
 }
 
+@keyframes fadeOut {
+    to { opacity:0; visibility:hidden; }
+}
+
+/* ====== HERO SECTION ====== */
 .hero {
     position: relative;
     height: 100vh;
@@ -78,80 +103,132 @@ section {
     color: white;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 15px;
+}
+
+.hero-content h1 {
+  font-family: "Meow Script", cursive;
+}
+
+.heart {
+  font-size: 1.5em;
+  margin: 0 10px;
+  display: inline-block;
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+section {
+  padding: 60px 0;
 }
 
 </style>
+</head>
 
 <body>
 
-    <!-- Section 1 -->
-    <section id="hero" class="hero text-center">
-
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="videos/pre-wedding-1.mp4" type="video/mp4">
-        </video>
-
-        <div class="overlay"></div>
-
-        <div class="hero-content text-center px-3">
-
-            <h1 class="display-4 display-md-3 display-lg-1">
-                Oshin 
-                <br class="d-md-none">
-                <span class="heart">❤️</span>
-                <br class="d-md-none">
-                Shivam
-            </h1>
-
-            <p class="fs-6 fs-md-5 fs-lg-4">
-                22 • 23 • 24 June 2026
-            </p>
-
-        </div>
-
-
-
-    </section>
-
-    <div class="container">
-
-        <!-- Section 2 -->
-        <section id="events" class="container text-center">
-        <h2>Wedding Events</h2>
-        <div class="row">
-            <div class="col-md-4">Haldi – 22 June</div>
-            <div class="col-md-4">Mehndi – 23 June</div>
-            <div class="col-md-4">Wedding – 24 June</div>
-        </div>
-        </section>
-
-        <!-- Section 3 - Map -->
-        <section class="container text-center my-5">
-            <div class="ratio ratio-16x9">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d806.1361427570743!2d76.71653926959083!3d31.75964059838158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDQ1JzM0LjciTiA3NsKwNDMnMDEuOSJF!5e1!3m2!1sen!2sin!4v1770747066189!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-
-        <!-- Section 4 - Rsvp via whatsapp -->
-        <div class="whtsap-rsvp text-center">
-            <a href="https://wa.me/918628811495?text=Blessings for your wedding!"
-                class="btn btn-success btn-lg px-4 py-2">
-                Send Blessings on WhatsApp
-            </a>
-        </div>
-        
-        <!-- Section 5 -->
-        <div class="text-center">
-            <p class="fs-4 fst-italic mt-5">With the blessings of our families, we invite you to celebrate our union.</p>
-            <p class="fs-5">
-            Son of Mr. Rakesh Kumar & Mrs. Sarla Devi<br>
-            Daughter of Mr. Pritam Chand & Mrs. Champa Devi
-            </p>
-            <p class="fs-5">
-            सपरिवार आप सादर आमंत्रित हैं।
-            </p>
+<!-- ================= ENVELOPE INTRO ================= -->
+<div id="envelope-wrapper">
+    <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">
+            <h3 style="font-family:'Meow Script',cursive;">Oshin ❤️ Shivam</h3>
+            <button onclick="openInvite()" class="btn btn-danger mt-3">
+                Open Invitation
+            </button>
         </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</div>
+
+<!-- ================= MAIN SITE ================= -->
+<div id="main-site" style="display:none;">
+
+<!-- HERO -->
+<section id="hero" class="hero text-center">
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="videos/pre-wedding-1.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1 class="display-4 display-md-3 display-lg-1">
+            Oshin 
+            <br class="d-md-none">
+            <span class="heart">❤️</span>
+            <br class="d-md-none">
+            Shivam
+        </h1>
+
+        <p class="fs-6 fs-md-5 fs-lg-4">
+            22 • 23 • 24 June 2026
+        </p>
+
+    </div>
+</section>
+
+<div class="container">
+
+<!-- EVENTS -->
+<section id="events" class="text-center">
+    <h2>Wedding Events</h2>
+    <div class="row mt-4">
+        <div class="col-md-4">Haldi – 22 June</div>
+        <div class="col-md-4">Mehndi – 23 June</div>
+        <div class="col-md-4">Wedding – 24 June</div>
+    </div>
+</section>
+
+<!-- MAP -->
+<section class="text-center my-5">
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d806.1361427570743!2d76.71653926959083!3d31.75964059838158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDQ1JzM0LjciTiA3NsKwNDMnMDEuOSJF!5e1!3m2!1sen!2sin"
+        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- RSVP -->
+<div class="text-center mb-5">
+    <a href="https://wa.me/918628811495?text=Blessings for your wedding!"
+        class="btn btn-success btn-lg px-4 py-2">
+        Send Blessings on WhatsApp
+    </a>
+</div>
+
+<!-- FAMILY TEXT -->
+<div class="text-center mb-5">
+    <p class="fs-4 fst-italic">With the blessings of our families, we invite you to celebrate our union.</p>
+    <p class="fs-5">
+        Son of Mr. Rakesh Kumar & Mrs. Sarla Devi<br>
+        Daughter of Mr. Pritam Chand & Mrs. Champa Devi
+    </p>
+    <p class="fs-5">
+        सपरिवार आप सादर आमंत्रित हैं।
+    </p>
+</div>
+
+</div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function openInvite(){
+    document.querySelector('.envelope').classList.add('open');
+
+    setTimeout(()=>{
+        document.getElementById('envelope-wrapper').style.display='none';
+        document.getElementById('main-site').style.display='block';
+    },800);
+}
+</script>
+
 </body>
 </html>
